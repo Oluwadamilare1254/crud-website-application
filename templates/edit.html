@@ -1,0 +1,77 @@
+<style>
+    body{
+        background-color: rgba(0,0,255,0.4);
+    }
+    
+.soft{
+   width:100%;
+   height:auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap:20px;
+   background-color:rgb(102, 102, 107);
+
+    
+    
+
+}
+h2{
+    color:#fff;
+    text-align: center;
+    
+}
+div{
+color: #fff;
+}
+
+input{
+    color: #fff;
+    background-color: #000;
+}
+a{
+    text-decoration:none;
+    color:blueviolet;
+}
+
+a:hover{
+    background-color: rgba(0,0,0);
+    color:#fff;
+}
+.botton{
+    margin-top: 20px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+.style-1{
+    border:3px solid #000;
+    background-color: rgb(102, 102, 107);
+    color: #fff;
+}
+.style-2{
+        border:3px solid #000;
+        background-color: rgb(102, 102, 107);
+        color:#fff;
+}
+</style>
+
+<h2>Edit Item</h2>
+<form method="post">
+    <div class="soft">
+        <div>
+   Name: <input type="text" name="name" value="{{ item[1] }}">
+   </div>
+   <div>
+    Quantity: <input type="number" name="quantity" value="{{ item[2] }}">
+    </div>
+    <div>
+    Price: <input type="text" name="price" value="{{ item[3] }}">
+    </div>
+
+    </div>
+    <div class="botton">
+    <button type="submit"class="style-1">Update</button>
+    <button type="submit"class="style-2"><a href="{{ url_for('index') }}"></a>Back</button>
+</div>
+</form>
