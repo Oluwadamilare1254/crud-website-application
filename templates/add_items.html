@@ -1,0 +1,73 @@
+<style>
+    body {
+        background-color: rgba(0, 0, 255, 0.4);
+        ;
+    }
+
+    .troubl {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
+        background-color: rgb(102, 102, 107);
+
+
+    }
+
+    button {
+        margin-top: 20px
+    }
+
+    h2 {
+        text-align: center;
+        color: #fff;
+    }
+
+    .two-devils {
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+        
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    button,a {
+        background-color: rgb(102, 102, 107);
+        color: #fff;
+        
+
+    }
+    button{
+        border: 3px solid black;
+    }
+    div{
+        color:#fff;
+    }
+    input{
+        color: #fff;
+        background-color: 000;
+    }
+</style>
+
+<h2>Add Item</h2>
+<form method="post">
+    <div class="troubl">
+        <div>
+            Name: <input type="text" name="name" id="1">
+        </div>
+        <div>
+            Quantity: <input type="number" name="quantity" id="2">
+        </div>
+        <div>
+            Price: <input type="text" name="price">
+        </div>
+    </div>
+    <div class="two-devils">
+        <button type="submit">Add</button>
+        <button><a href="{{ url_for('index') }}">Back</a></button>
+    </div>
+</form>
